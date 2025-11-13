@@ -2,119 +2,138 @@
    ESTILOS GERAIS DO PROJETO
    =============================== */
 
-/* Aplica configurações básicas a toda a página */
+/* Reset e estilo base */
 * {
-    margin: 0;              /* Remove margens padrão do navegador */
-    padding: 0;             /* Remove espaçamentos padrão */
-    box-sizing: border-box; /* Mantém largura total incluindo bordas e preenchimentos */
-  }
-  
-  /* Define as cores, fonte e alinhamento geral */
-  body {
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    background-color: #f5f7fa; /* Fundo cinza-claro */
-    color: #333;               /* Cor principal do texto */
-    text-align: center;        /* Centraliza textos genéricos */
-    min-height: 100vh;         /* Garante altura mínima de tela cheia */
-  }
-  
-  /* Container principal da aplicação */
-  .app {
-    display: flex;             /* Usa flexbox para organização vertical */
-    flex-direction: column;    /* Elementos empilhados (de cima para baixo) */
-    align-items: center;       /* Centraliza os itens na horizontal */
-    padding-bottom: 80px;      /* Espaço reservado para o rodapé fixo */
-  }
-  
-  /* ===============================
-     CABEÇALHO (HEADER)
-     =============================== */
-  
-  header {
-    width: 100%;                        /* Ocupa toda a largura */
-    background-color: #0072bb;          /* Azul padrão SENAI */
-    color: white;                       /* Texto branco */
-    padding: 20px 0;                    /* Espaçamento interno */
-    font-size: 1.6em;                   /* Tamanho de texto maior */
-    font-weight: bold;                  /* Texto em negrito */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra abaixo do cabeçalho */
-  }
-  
-  /* Estilo do menu principal de navegação */
-  .menu-principal {
-    margin-top: 10px;
-  }
-  
-  .menu-principal a {
-    color: #005b96;           /* Azul escuro para links */
-    text-decoration: none;    /* Remove o sublinhado */
-    margin: 0 10px;           /* Espaçamento lateral */
-    font-weight: 500;         /* Leve destaque */
-  }
-  
-  .menu-principal a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
-  }
-  
-  /* ===============================
-     CONTEÚDO PRINCIPAL
-     =============================== */
-  
-  main {
-    margin-top: 30px;
-    width: 90%;
-    max-width: 900px;
-  }
-  
-  /* Título principal das páginas */
-  h1 {
-    color: #005b96;
-    margin-bottom: 20px;
-  }
-  
-  /* Parágrafos genéricos */
-  p {
-    color: #444;
-    line-height: 1.5; /* Espaçamento entre linhas */
-  }
-  
-  /* ===============================
-     BOTÕES
-     =============================== */
-  
-  button,
-  .btn {
-    background-color: #0072bb;       /* Azul padrão */
-    color: white;                    /* Texto branco */
-    border: none;                    /* Remove bordas padrão */
-    padding: 10px 20px;              /* Espaçamento interno */
-    border-radius: 6px;              /* Cantos arredondados */
-    margin: 5px;                     /* Espaçamento entre botões */
-    cursor: pointer;                 /* Mãozinha ao passar o mouse */
-    font-size: 1em;                  /* Tamanho padrão */
-    transition: background-color 0.3s ease; /* Transição suave no hover */
-  }
-  
-  button:hover,
-  .btn:hover {
-    background-color: #005b96;       /* Azul mais escuro ao passar o mouse */
-  }
-  
-  /* ===============================
-     CARDS DE EVENTOS
-     =============================== */
-  
-  .card-evento {
-    background-color: white;               /* Fundo branco */
-    border-radius: 10px;                   /* Cantos arredondados */
-    padding: 20px;
-  
-  }
-  
-  
-  footer {
-  
-  
-  }
-  
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background-color: #f0f4f8; /* Fundo suave */
+  color: #333;               /* Texto padrão */
+  text-align: center;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+/* Container principal */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px; /* Espaço para rodapé fixo */
+}
+
+/* ===============================
+   CABEÇALHO (HEADER)
+   =============================== */
+header {
+  width: 100%;
+  background: linear-gradient(135deg, #e3e4e6, #0072bb);
+  color: #e8f5fa;
+  padding: 20px 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-principal {
+  margin-top: 10px;
+}
+
+.menu-principal a {
+  color: #e8f5fa;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+  color: #ffe082;
+}
+
+/* ===============================
+   CONTEÚDO PRINCIPAL
+   =============================== */
+main {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 900px;
+}
+
+h1 {
+  color: #094a72;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   BOTÕES
+   =============================== */
+button,
+.btn {
+  background-color: #0072bb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #005b96;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   CARDS DE EVENTOS
+   =============================== */
+.evento {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.evento h2 {
+  color: #094a72;
+  margin-bottom: 12px;
+}
+
+.evento p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* ===============================
+   RODAPÉ (FOOTER)
+   =============================== */
+footer {
+  background-color: #0072bb;
+  color: #137b96;
+  padding: 12px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  letter-spacing: 0.5px;
+  font-size: 0.9em;
+}

@@ -1,0 +1,51 @@
+/* Container geral do card de evento */
+.evento {
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, #3f68b3, #6a8ed9);
+  color: #fff;
+  padding: 24px;
+  margin: 24px auto;
+  border-radius: 16px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.evento:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Texto dentro do card */
+.evento p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Título do evento */
+.evento h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #ffe082;
+}
+
+/* Botão dentro do card */
+.evento button {
+  background-color: #ffe082;
+  color: #3f68b3;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.evento button:hover {
+  background-color: #ffd54f;
+}
