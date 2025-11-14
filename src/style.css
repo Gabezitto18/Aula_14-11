@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-  background-color: #f0f4f8; /* Fundo suave */
+  background-color: #307ecc; /* Fundo suave */
   color: #333;               /* Texto padrão */
   text-align: center;
   min-height: 100vh;
@@ -31,8 +31,8 @@ body {
    =============================== */
 header {
   width: 100%;
-  background: linear-gradient(135deg, #e3e4e6, #0072bb);
-  color: #e8f5fa;
+  background: linear-gradient(135deg, #5e7ab1, #0072bb);
+  color: #418caa;
   padding: 20px 0;
   font-size: 1.6em;
   font-weight: bold;
@@ -44,7 +44,7 @@ header {
 }
 
 .menu-principal a {
-  color: #e8f5fa;
+  color: #10191d;
   text-decoration: none;
   margin: 0 12px;
   font-weight: 500;
@@ -52,74 +52,52 @@ header {
 }
 
 .menu-principal a:hover {
-  color: #ffe082;
+  color: #6d6240;
 }
 
 /* ===============================
    CONTEÚDO PRINCIPAL
    =============================== */
-main {
-  margin-top: 30px;
+.pagina-inicio {
   width: 90%;
-  max-width: 900px;
-}
-
-h1 {
-  color: #094a72;
-  margin-bottom: 20px;
-}
-
-p {
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-/* ===============================
-   BOTÕES
-   =============================== */
-button,
-.btn {
-  background-color: #0072bb;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover,
-.btn:hover {
-  background-color: #005b96;
-  transform: translateY(-2px);
-}
-
-/* ===============================
-   CARDS DE EVENTOS
-   =============================== */
-.evento {
-  background-color: #fff;
-  border-radius: 12px;
+  max-width: 900px;  
+  background-color: #38ac68;
+  color: rgb(194, 35, 35);
   padding: 20px;
-  margin: 20px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;       /* centraliza horizontalmente */
+  border-radius: 12px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.evento:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.conteudo-principal {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;              
+  justify-content: center;
+  padding: 20px;
 }
 
-.evento h2 {
+.container {
+  background-color: #191863;   
+  border: 1px solid #703a3a;   
+  border-radius: 12px;      
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(58, 45, 45, 0.1); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);   
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.container h2 {
   color: #094a72;
   margin-bottom: 12px;
 }
 
-.evento p {
+.container p {
   color: #555;
   font-size: 15px;
 }
@@ -127,13 +105,50 @@ button:hover,
 /* ===============================
    RODAPÉ (FOOTER)
    =============================== */
-footer {
-  background-color: #0072bb;
-  color: #137b96;
-  padding: 12px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  letter-spacing: 0.5px;
-  font-size: 0.9em;
+   .rodape {
+    width: 100%;
+    background-color: #2e378b; /* verde escuro para contraste */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .rodape .social-links {
+    margin-top: 10px;
+  }
+  
+  .rodape .social-links a {
+    margin: 0 10px;
+    color: #270505;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .rodape .social-links a:hover {
+    color: #ffd700; /* dourado no hover */
+  }
+
+  /* Container raiz do app para layout de página inteira */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Empurra o rodapé para baixo quando o conteúdo é curto */
+.app > .rodape {
+  margin-top: auto;
+}
+
+.rodape-container {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  font-size: 13px;
+  color: #666;
+  text-align: right;
+}
+
