@@ -1,16 +1,12 @@
-import React from "react";
-
 function Footer() {
+  //função pra data
+  const ano = new Date().getFullYear();
+
   return (
-    <footer className="rodape">
-      <p>© 2025 - Meu Site | Todos os direitos reservados</p>
-      <div className="social-links">
-        <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
+    <footer>
+      <p> Meu site em React - Técnico em Desenvolvimento de Sistemas- {ano}</p>
     </footer>
-  );
+  ); 
 }
 
 export default Footer;

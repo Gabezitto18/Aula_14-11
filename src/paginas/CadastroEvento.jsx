@@ -1,67 +1,67 @@
 import React, { useState } from "react";
+import "./cadastroEvento.css";
+import
 
-function CadastroEvento({ onCadastrar }) {
-  // Estados dos campos do formulário
+function CadastroEvento() {
   const [nome, setNome] = useState("");
   const [data, setData] = useState("");
   const [local, setLocal] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
-  function Enviar(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Objeto com dados do evento
-    const novoEvento = {
-      id: Date.now(),
-      nome,
-      data,
-      local,
-    };
-
-    // Envia o evento para o componente pai
-    onCadastrar(novoEvento);
-
-    // Limpa os campos após cadastrar
-    setNome("");
-    setData("");
-    setLocal("");
-  }
+    if (nome && data && local) {
+      setMensagem("Evento cadastrado com sucesso!");
+      setNome("");
+      setData("");
+      setLocal("");
+    } else {
+      setMensagem("Por favor, preencha todos os campos.");
+    }
+  };
 
   return (
-    <div className="cadastroEvento-container">
-      <h2>Cadastrar Evento</h2>
-
-      <form onSubmit={Enviar} className="form-evento">
-        <label>Título do Evento:</label>
+    <div className="cadastro-evento">
+      <h1>Cadastro de Evento</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Nome do Evento</label>
         <input
           type="text"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
-          required
         />
 
-        <label>Data:</label>
+        <label>Data</label>
         <input
           type="date"
           value={data}
           onChange={(e) => setData(e.target.value)}
-          required
         />
 
-        <label>Local:</label>
+        <label>Local</label>
         <input
           type="text"
           value={local}
           onChange={(e) => setLocal(e.target.value)}
           required
         />
+        <div className="botoes">
+           <button type="submi" className="btn-salvar"> Salvar Evento</button>
+           <button type="button" className="btn-salvar" onClick={() => Navigate("/")}> <Voltar </button>
+           </div>
 
-        <button type="submit" className="btn-salvar">
-          Salvar Evento
-        </button>
-        <button type="button" className="btn-voltar">
-          Voltar
-        </button>
+      
       </form>
+
+      {mensagem && (
+        <p
+          className={`mensagem ${
+            mensagem.includes("sucesso") ? "sucesso" : "erro"
+          }`}
+        >
+          {mensagem}
+        </p>
+      )}
     </div>
   );
 }
